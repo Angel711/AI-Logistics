@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,6 +49,14 @@
             margin-top: 20px;
             text-align: center;
         }
+        .section img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .section h2 {
+            text-align: center;
+        }
         .row {
             display: flex;
             justify-content: space-around;
@@ -92,11 +101,26 @@
             font-size: 12px;
             color: #666;
         }
+        .btn-redirect {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2e2c26;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .btn-redirect:hover {
+            background-color: #9ea76b;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <button class="button">Productos</button>
+        <a href="{% url 'Principal' %}"><button class="button">Productos</button></a>
         <button class="button">Ventas</button>
         <input type="text" class="search-box" placeholder="Buscar...">
     </div>
@@ -107,7 +131,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 1 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(16).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 1</div>
                             <div class="detalle">Cantidad: 10 piezas</div>
@@ -118,7 +142,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 2 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(17).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(17).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 2</div>
                             <div class="detalle">Cantidad: 5 piezas</div>
@@ -129,7 +153,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 3 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(18).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(18).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 3</div>
                             <div class="detalle">Cantidad: 20 piezas</div>
@@ -142,7 +166,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 4 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(19).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 4</div>
                             <div class="detalle">Cantidad: 15 piezas</div>
@@ -153,7 +177,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 5 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(20).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(20).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 5</div>
                             <div class="detalle">Cantidad: 8 piezas</div>
@@ -164,7 +188,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 6 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(21).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(21).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 6</div>
                             <div class="detalle">Cantidad: 12 piezas</div>
@@ -175,5 +199,17 @@
             </div>
         </div>
     </div>
+    <button class="btn-redirect" onclick="redirectToPage()">+</button>
+
+    <script>
+        function redirectToPage() {
+            // Cambia la URL a la que quieres redirigir
+            window.location.href = "AgregarPlantilla.html";
+        }
+    </script>
 </body>
 </html>
+
+
+
+

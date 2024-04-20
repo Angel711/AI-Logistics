@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,8 +51,9 @@
 </head>
 <body>
     <div class="login-container">
-        <h2><img src="./ujo.png" style="width: 4cm; height: 4cm;"></h2>
-        <form action="#" method="post">
+        <h2><img src="{% static './images/ujo.png' %}" style="width: 4cm; height: 4cm;"></h2>
+        <form action="{% url 'Principal' %}" method="post">
+            {% csrf_token %}
             <input type="text" name="username" placeholder="Usuario" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <input type="submit" value="Iniciar Sesión">
