@@ -6,9 +6,11 @@ from .views import product_list
 urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('principal/', views.Principal, name='Principal'),
-    path('card/', views.Card, name='Card'),
     path('addtemplate/', views.Addtemplate, name='Addtemplate'),
     path('sellers/', views.Sellers, name='Sellers'),
-    path('products/', product_list, name='product_list'),
-    path('usuario/',views.Prueba)
+    path('products/', views.Products, name='Product'),
+    path('usuario/',views.Prueba),
+    path('admi/', views.Admin, name='Admin'),
+    path('addtemplate/', views.Add, name='Add'),
+    path('sells/', views.Sells, name='Sells'),
 ]

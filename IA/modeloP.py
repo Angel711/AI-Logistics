@@ -320,7 +320,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Cargar datos históricos
-df = pd.read_csv(r'C:\Users\alexi\Documents\Uni\vgsales.csv')
+df = pd.read_csv(r'vgsales.csv')
 
 # Preprocesamiento de datos
 df.dropna(inplace=True)  # Eliminar filas con valores nulos

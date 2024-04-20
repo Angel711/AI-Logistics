@@ -17,9 +17,6 @@ def Login(request):
 def Principal(request):
     return render(request, 'principal.html', {})
 
-def Card(request):
-    return render(request, 'card.html', {})
-
 def Addtemplate(request):
     return render(request, 'addtemplate.html', {})
 
@@ -46,3 +43,14 @@ def login_view(request):
 
     return render(request, 'login.html')
 
+def Admin(request):
+    return render(request, 'admi.html', {})
+
+def Add(request):
+    return render(request, 'addtemplate.html', {})
+
+def Sells(request):
+    return render(request, 'sells.html',{})
+
+def Products(request):
+    return render(request, 'product2.html', {})

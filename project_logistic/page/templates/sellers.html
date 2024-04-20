@@ -21,7 +21,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 1 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(16).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 1</div>
                             <div class="detalle">Cantidad: 10 piezas</div>
@@ -32,7 +32,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 2 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(17).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 2</div>
                             <div class="detalle">Cantidad: 5 piezas</div>
@@ -43,7 +43,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 3 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(18).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 3</div>
                             <div class="detalle">Cantidad: 20 piezas</div>
@@ -56,7 +56,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 4 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(19).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 4</div>
                             <div class="detalle">Cantidad: 15 piezas</div>
@@ -67,7 +67,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 5 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(20).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 5</div>
                             <div class="detalle">Cantidad: 8 piezas</div>
@@ -78,7 +78,7 @@
                 <div class="column">
                     <!-- Tarjeta de Producto 6 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="./descarga(21).jpeg" alt="Imagen del Producto">
+                        <img class="imagen" src="{% static 'images/descarga(19).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
                             <div class="titulo">Nombre del Producto 6</div>
                             <div class="detalle">Cantidad: 12 piezas</div>
@@ -94,12 +94,12 @@
     <script>
         document.getElementById("productosBtn").addEventListener("click", function() {
             // Redirigir a la página de productos
-            window.location.href = "Productos.html";
+            window.location.href = "{% url 'product_list' %}";
         });
 
         document.getElementById("ventasBtn").addEventListener("click", function() {
             // Redirigir a la página de ventas
-            window.location.href = "Ventas.html";
+            window.location.href = "";
         });
     </script>
 </body>

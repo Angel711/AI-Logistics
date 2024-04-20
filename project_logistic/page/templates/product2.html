@@ -8,64 +8,35 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: rgba(229, 214, 146, 0.598); /* Color de fondo */
-            color: rgb(0, 0, 0); /* Color del texto */
+            background-color: rgba(229, 214, 146, 0.598);
+            color: rgb(0, 0, 0);
             margin: 0;
             padding: 0;
-            position: relative; /* Añadido para posicionar el botón */
-            min-height: 100vh; /* Añadido para asegurar que el botón se muestre en la parte inferior */
-        }
-        .header {
-            background-color: #f5a165; /* Color del encabezado */
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            justify-content: flex-start; /* Modificado para alinear a la izquierda */
-            align-items: center;
+            position: relative;
+            min-height: 100vh;
+            zoom: 125%;
         }
         .container {
-            max-width: 750px; /* Ajustado para mejor visualización */
+            max-width: 750px;
             margin: 0 auto;
             padding: 20px;
-            margin-bottom: 3cm; /* Aumento del margen inferior */
-        }
-        .button {
-            background-color: rgba(193, 113, 91, 0.925); /* Color del botón */
-            color: rgb(255, 250, 250);
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 70px;
-
-        }
-        .button:hover {
-            background-color: rgb(114, 113, 113); /* Cambio de color al pasar el ratón */
+            margin-bottom: 3cm;
         }
         .section {
-            background-color: #efb87ac5; /* Color de fondo de la sección */
-            padding: 40px; /* Aumentar el relleno */
+            background-color: #efb87ac5;
+            padding: 40px;
             margin-top: 20px;
             text-align: center;
-        }
-        .section img {
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 10px;
         }
         .row {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             margin-bottom: 20px;
         }
         .column {
-            flex-basis: 30%; /* Para que ocupe el 30% del espacio disponible */
-        }
-        .search-box {
-            margin-left: 10px;
+            flex-basis: 30%;
+            margin-bottom: 20px;
         }
         .tarjeta {
             width: 200px;
@@ -100,61 +71,52 @@
             font-size: 12px;
             color: #666;
         }
-        .btn-redirect {
-            position: absolute;
+        .volver {
+            position: fixed;
             bottom: 20px;
-            right: 20px;
-            background-color: #2e2c26;
-            color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #cf8d56;
+            color: #fff;
             padding: 10px 20px;
-            border: none;
-            border-radius: 50%;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 24px;
-        }
-        .btn-redirect:hover {
-            background-color: #9ea76b;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <button class="button">Productos</button>
-        <button class="button">Ventas</button>
-        <input type="text" class="search-box" placeholder="Buscar...">
-    </div>
     <div class="container">
         <div class="section">
-            <h2>Imágenes Arriba</h2>
+            <h2>Productos</h2>
             <div class="row">
                 <div class="column">
-                    <!-- Tarjeta de Producto 1 -->
+                    <!-- Tarjeta de Producto 10 -->
                     <div class="tarjeta">
-                        <img class="imagen" src="{% static './images/descarga(17).jpeg' %}"alt="Imagen del Producto">
+                        <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 1</div>
+                            <div class="titulo">Nombre del Producto 10</div>
                             <div class="detalle">Cantidad: 10 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
                     </div>
                 </div>
                 <div class="column">
-                    <!-- Tarjeta de Producto 2 -->
+                    <!-- Tarjeta de Producto 11 -->
                     <div class="tarjeta">
                         <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 2</div>
+                            <div class="titulo">Nombre del Producto 11</div>
                             <div class="detalle">Cantidad: 5 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
                     </div>
                 </div>
                 <div class="column">
-                    <!-- Tarjeta de Producto 3 -->
+                    <!-- Tarjeta de Producto 12 -->
                     <div class="tarjeta">
                         <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 3</div>
+                            <div class="titulo">Nombre del Producto 12</div>
                             <div class="detalle">Cantidad: 20 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
@@ -163,48 +125,79 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <!-- Tarjeta de Producto 4 -->
+                    <!-- Tarjeta de Producto 13 -->
                     <div class="tarjeta">
                         <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 4</div>
+                            <div class="titulo">Nombre del Producto 13</div>
                             <div class="detalle">Cantidad: 15 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
                     </div>
                 </div>
                 <div class="column">
-                    <!-- Tarjeta de Producto 5 -->
+                    <!-- Tarjeta de Producto 14 -->
                     <div class="tarjeta">
                         <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 5</div>
+                            <div class="titulo">Nombre del Producto 14</div>
                             <div class="detalle">Cantidad: 8 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
                     </div>
                 </div>
                 <div class="column">
-                    <!-- Tarjeta de Producto 6 -->
+                    <!-- Tarjeta de Producto 15 -->
                     <div class="tarjeta">
                         <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
                         <div class="contenido">
-                            <div class="titulo">Nombre del Producto 6</div>
+                            <div class="titulo">Nombre del Producto 15</div>
                             <div class="detalle">Cantidad: 12 piezas</div>
                             <div class="descripcion">Descripción del producto aquí...</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="column">
+                    <!-- Tarjeta de Producto 16 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 16</div>
+                            <div class="detalle">Cantidad: 17 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 17 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 17</div>
+                            <div class="detalle">Cantidad: 9 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 18 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="{% static './images/descarga(16).jpeg' %}" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 18</div>
+                            <div class="detalle">Cantidad: 25 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Se pueden agregar más filas de tarjetas aquí si es necesario -->
         </div>
     </div>
-    <button class="btn-redirect" onclick="redirectToPage()">+</button>
 
-    <script>
-        function redirectToPage() {
-            // Cambia la URL a la que quieres redirigir
-            window.location.href = "addtemplate.html";
-        }
-    </script>
+    <!-- Botón para volver atrás -->
+    <button class="volver" onclick="window.location.href='productos2.html'">Anterior Página</button>
 </body>
 </html>
