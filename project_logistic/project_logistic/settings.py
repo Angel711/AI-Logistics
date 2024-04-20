@@ -87,10 +87,10 @@ DATABASES = {
         'NAME': 'testdb1',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://axfervagar:0TG3DeE4vET8iVNW@aafcg13a.be913qc.mongodb.net/?retryWrites=true&w=majority&appName=Aafcg13a',
+            'host': 'mongodb+srv://test:test@aafcg13a.be913qc.mongodb.net/?retryWrites=true&w=majority&appName=Aafcg13a',
             'port': 27017,
-            'username': "axfervagar",
-            'password': "0TG3DeE4vET8iVNW",
+            'username': "test",
+            'password': "test",
             'authSource': 'admin',
         }
     }
@@ -112,6 +112,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Internationalization
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 
