@@ -8,41 +8,49 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffb3004f;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(to right, #f8a38a, #ffe259); /* Fondo con degradado */
         }
         .login-container {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(236, 221, 221, 0.1);
-            width: 300px;
+            width: 320px;
+            text-align: center;
         }
         .login-container h2 {
             margin-top: 0;
-            text-align: center;
+            margin-bottom: 30px;
+            color: #0a0a0a; /* Cambio el color del título */
+        }
+        .login-container img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
             width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
         }
         .login-container input[type="submit"] {
             width: 100%;
-            padding: 10px;
-            background-color: #e9c720a5;
+            padding: 12px;
+            background-color: #e69557cd;
             border: none;
-            border-radius: 4px;
+            border-radius: 70px;
             color: #0a0a0a;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .login-container input[type="submit"]:hover {
             background-color: #c5c5c5;
@@ -64,8 +72,13 @@
         <h2><img src="{% static './images/ujo.png' %}" style="width: 4cm; height: 4cm;"></h2>
         <form action="{% url 'Principal' %}" method="post">
             {% csrf_token %}
+        <h2><img src="./ujo.png" alt="Logo"></h2>
+        <form action="#" method="post">
+
             <input type="text" name="username" placeholder="Usuario" required>
+            <br>
             <input type="password" name="password" placeholder="Contraseña" required>
+            <br>
             <input type="submit" value="Iniciar Sesión">
         </form>
     </div>
