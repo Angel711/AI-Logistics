@@ -42,14 +42,16 @@
 </head>
 <body>
 
+{% for product in products %}
 <div class="tarjeta">
-  <img class="imagen" src="./descarga(21).jpeg" alt="Imagen del Producto">
+  <img class="imagen" src="{{ product.image }}" alt="Imagen del Producto">
   <div class="contenido">
-    <div class="titulo">Nombre del Producto</div>
-    <div class="detalle">Cantidad: 10 piezas</div>
-    <div class="descripcion">Descripción del producto aquí...</div>
+    <div class="titulo">{{ product.name }}</div>
+    <div class="detalle">Cantidad: {{ product.quantity }} piezas</div>
+    <div class="descripcion">{{ product.description }}</div>
   </div>
 </div>
+{% endfor %}
 
 </body>
 </html>
