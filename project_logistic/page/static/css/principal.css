@@ -1,56 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #f8a38a, #ffe259); /* Cambio del color de fondo */
-    color: #333; /* Color del texto */
+    background-color: rgba(229, 214, 146, 0.598); /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.header {
-    background-color: #c5ad80; /* Color del encabezado */
-    padding: 10px;
-    text-align: center;
+    position: relative; /* Añadido para posicionar el botón */
+    min-height: 100vh; /* Añadido para asegurar que el botón se muestre en la parte inferior */
+    zoom: 125%; /* Zoom al 125% */
 }
 
 .container {
     max-width: 750px; /* Ajustado para mejor visualización */
     margin: 0 auto;
     padding: 20px;
-    margin-bottom: 3cm; /* Aumento del margen inferior */
-}
-
-.button {
-    background-color: #2e2c26; /* Color del botón */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-}
-
-.button:hover {
-    background-color: #9ea76b; /* Cambio de color al pasar el ratón */
-}
-
-.section {
-    background-color: #ffffffd6; /* Color de fondo de la sección */
-    padding: 40px; /* Aumentar el relleno */
-    margin-top: 20px;
-    text-align: center;
-}
-
-.section img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
+    margin-bottom: 3cm; /* Aumento del margen inferior */}
 
 .row {
     display: flex;
@@ -100,20 +63,13 @@ body {
     font-size: 12px;
     color: #666;
 }
-
-.btn-redirect {
-    position: fixed; /* Cambiado a posición fija */
+.next-page-button {
+    position: fixed;
     bottom: 20px;
-    right: 20px;
-    background-color: #2e2c26;
-    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #cf8d56;
+    color: #ffffff;
     padding: 10px 20px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.btn-redirect:hover {
-    background-color: #9ea76b;
-}
+    border-radius: 5px;
+    cursor: pointer;}

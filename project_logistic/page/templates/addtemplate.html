@@ -1,34 +1,34 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agregar Productos</title>
-        <link rel="stylesheet" href="{% static 'css/addTemplate.css' %}">
-    </head>
-    <body>
-        <div class="container">
-            <h2>Agregar productos</h2>
-            <form action="/guardar_informacion" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="imagen">Imagen:</label>
-                    <input type="file" id="imagen" name="imagen" accept="image/*" required>
-                </div>
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="cantidad">Cantidad de piezas:</label>
-                    <input type="text" id="cantidad" name="cantidad" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                </div>
-                <input type="submit" value="Agregar">
-            </form>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos</title>
+    <link rel="stylesheet" href="{% static 'css/addTemplate.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar productos</h2>
+        <form action="/guardar_informacion" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad de piezas:</label>
+                <input type="text" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Agregar">
+        </form>
+    </div>
+</body>
 </html>
