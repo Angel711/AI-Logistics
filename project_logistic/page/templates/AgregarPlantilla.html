@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2e0d8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #c5ad80;
+            border-radius: 4%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #c2c2c2;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            margin-top: 5px;
+            color: transparent; /* Oculta el texto "No file chosen" */
+        }
+        input[type="file"]::-webkit-file-upload-button {
+            visibility: hidden; /* Oculta el botón de carga predeterminado en Chrome */
+        }
+        input[type="file"]::before {
+            content: ''; /* Elimina cualquier contenido antes del botón */
+            display: inline-block;
+            width: 6%;
+            height: 100%;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="file"]:hover::before {
+            background-color: #a1a785; /* Cambia el color al pasar el cursor sobre el botón */
+        }
+        input[type="submit"] {
+            background-color: #2e2c26;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #9ea76b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar productos</h2>
+        <form action="/guardar_informacion" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad de piezas:</label>
+                <input type="text" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Agregar">
+        </form>
+    </div>
+</body>
+</html>

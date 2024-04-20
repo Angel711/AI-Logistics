@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2e0d8; /* Color de fondo */
+            color: #333; /* Color del texto */
+            margin: 0;
+            padding: 0;
+            position: relative; /* Añadido para posicionar el botón */
+            min-height: 100vh; /* Añadido para asegurar que el botón se muestre en la parte inferior */
+        }
+        .header {
+            background-color: #c5ad80; /* Color del encabezado */
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 750px; /* Ajustado para mejor visualización */
+            margin: 0 auto;
+            padding: 20px;
+            margin-bottom: 3cm; /* Aumento del margen inferior */
+        }
+        .button {
+            background-color: #2e2c26; /* Color del botón */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background-color: #9ea76b; /* Cambio de color al pasar el ratón */
+        }
+        .section {
+            background-color: #ffffffd6; /* Color de fondo de la sección */
+            padding: 40px; /* Aumentar el relleno */
+            margin-top: 20px;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .column {
+            flex-basis: 30%; /* Para que ocupe el 30% del espacio disponible */
+        }
+        .search-box {
+            margin-left: 10px;
+        }
+        .tarjeta {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .imagen {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            float: left;
+            margin-right: 10px;
+        }
+        .contenido {
+            padding: 10px;
+        }
+        .titulo {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .detalle {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 3px;
+        }
+        .descripcion {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="button">Productos</button>
+        <button class="button">Ventas</button>
+        <input type="text" class="search-box" placeholder="Buscar...">
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>Imágenes Arriba</h2>
+            <div class="row">
+                <div class="column">
+                    <!-- Tarjeta de Producto 1 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(16).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 1</div>
+                            <div class="detalle">Cantidad: 10 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 2 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(17).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 2</div>
+                            <div class="detalle">Cantidad: 5 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 3 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(18).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 3</div>
+                            <div class="detalle">Cantidad: 20 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <!-- Tarjeta de Producto 4 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(19).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 4</div>
+                            <div class="detalle">Cantidad: 15 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 5 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(20).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 5</div>
+                            <div class="detalle">Cantidad: 8 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Tarjeta de Producto 6 -->
+                    <div class="tarjeta">
+                        <img class="imagen" src="./descarga(21).jpeg" alt="Imagen del Producto">
+                        <div class="contenido">
+                            <div class="titulo">Nombre del Producto 6</div>
+                            <div class="detalle">Cantidad: 12 piezas</div>
+                            <div class="descripcion">Descripción del producto aquí...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
