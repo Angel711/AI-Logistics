@@ -12,12 +12,12 @@
         <h2><img src="{% static './images/ujo.png' %}" style="width: 4cm; height: 4cm;"></h2>
         <form action="{% url 'login' %}" method="POST">
             {% csrf_token %}
-            <h2><img src="./ujo.png" alt="Logo"></h2>
+            <h2>AI - Logistics</h2>
             <input type="text" name="username" placeholder="Usuario" required>
             <br>
             <input type="password" name="password" placeholder="Contraseña" required>
             <br>
-            <input type="submit" value="Iniciar Sesión">
+            <input id="btnLogin" type="submit" value="Iniciar Sesión">
         </form>
     </div>
 </body>
